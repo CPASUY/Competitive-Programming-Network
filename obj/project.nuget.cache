@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "gckHOkOupw4DuRGWg2gBtpFbYew04RXCsvWZ0kmp7hGZzkudg9ifxbPnEgDKi3zfDw5vjVCYxHhod4k5oAelQg==",
+  "dgSpecHash": "4ZOEKCZdz55KWGSoy0Mr+iawXUgFDh15EdRevmF7iG2JNOaUlo3tp6acphlTmDKBJ/ydYIYduOCOJHH39MbAmQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Financiero\\source\\repos\\Competitive-Programming-Network\\Rcp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Financiero\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\Financiero\\.nuget\\packages\\microsoft.applicationinsights.agent.intercept\\2.4.0\\microsoft.applicationinsights.agent.intercept.2.4.0.nupkg.sha512",
     "C:\\Users\\Financiero\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Financiero\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\Financiero\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\5.0.0\\microsoft.aspnetcore.razor.language.5.0.0.nupkg.sha512",
@@ -129,5 +130,16 @@
     "C:\\Users\\Financiero\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Financiero\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Microsoft.ApplicationInsights.Agent.Intercept 2.4.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \"net5.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "Microsoft.ApplicationInsights.Agent.Intercept",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }

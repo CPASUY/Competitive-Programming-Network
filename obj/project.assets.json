@@ -11,6 +11,15 @@
           "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
+      "Microsoft.ApplicationInsights.Agent.Intercept/2.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.AI.Agent.Intercept.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.AI.Agent.Intercept.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -2028,6 +2037,19 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Microsoft.ApplicationInsights.Agent.Intercept/2.4.0": {
+      "sha512": "WuK9x24Yt3a3wUVsgFTp0Ef3q2ne0dPSflLRysRnpao70R1+oUil6wW/6tK2PeiwL2giiH+Enli1S+yXmSStqQ==",
+      "type": "package",
+      "path": "microsoft.applicationinsights.agent.intercept/2.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Microsoft.AI.Agent.Intercept.dll",
+        "lib/net45/Microsoft.AI.Agent.Intercept.dll",
+        "microsoft.applicationinsights.agent.intercept.2.4.0.nupkg.sha512",
+        "microsoft.applicationinsights.agent.intercept.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
@@ -7142,6 +7164,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Microsoft.ApplicationInsights.Agent.Intercept >= 2.4.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.8",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.8",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2"
@@ -7186,6 +7209,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "Microsoft.ApplicationInsights.Agent.Intercept": {
+            "target": "Package",
+            "version": "[2.4.0, )"
+          },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[5.0.8, )"
@@ -7222,5 +7249,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Microsoft.ApplicationInsights.Agent.Intercept 2.4.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \"net5.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "Microsoft.ApplicationInsights.Agent.Intercept",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }

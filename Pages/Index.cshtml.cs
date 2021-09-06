@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Diagnostics.Instrumentation.Extensions.Intercept;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace Rcp.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 
+
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
@@ -21,5 +23,7 @@ namespace Rcp.Pages
         {
 
         }
+       
     }
 }
+

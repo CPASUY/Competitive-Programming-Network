@@ -300,3 +300,4 @@ C:\Users\Financiero\source\repos\Competitive-Programming-Network\obj\Debug\net5.
 C:\Users\Financiero\source\repos\Competitive-Programming-Network\obj\Debug\net5.0\ref\Rcp.dll
 C:\Users\Financiero\source\repos\Competitive-Programming-Network\obj\Debug\net5.0\Rcp.pdb
 C:\Users\Financiero\source\repos\Competitive-Programming-Network\obj\Debug\net5.0\Rcp.genruntimeconfig.cache
+C:\Users\Financiero\source\repos\Competitive-Programming-Network\bin\Debug\net5.0\Microsoft.AI.Agent.Intercept.dll

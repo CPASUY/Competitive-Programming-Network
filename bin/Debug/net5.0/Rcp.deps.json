@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "Rcp/1.0.0": {
         "dependencies": {
+          "Microsoft.ApplicationInsights.Agent.Intercept": "2.4.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.8",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.8",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
@@ -331,6 +332,17 @@
             "assemblyVersion": "2.8.0.0",
             "fileVersion": "2.8.26.1919"
           }
+        }
+      },
+      "Microsoft.ApplicationInsights.Agent.Intercept/2.4.0": {
+        "runtime": {
+          "lib/net45/Microsoft.AI.Agent.Intercept.dll": {
+            "assemblyVersion": "2.4.0.0",
+            "fileVersion": "2.4.0.40027"
+          }
+        },
+        "compile": {
+          "lib/net45/Microsoft.AI.Agent.Intercept.dll": {}
         }
       },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
@@ -3500,6 +3512,13 @@
       "sha512": "sha512-OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "path": "humanizer.core/2.8.26",
       "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
+    },
+    "Microsoft.ApplicationInsights.Agent.Intercept/2.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WuK9x24Yt3a3wUVsgFTp0Ef3q2ne0dPSflLRysRnpao70R1+oUil6wW/6tK2PeiwL2giiH+Enli1S+yXmSStqQ==",
+      "path": "microsoft.applicationinsights.agent.intercept/2.4.0",
+      "hashPath": "microsoft.applicationinsights.agent.intercept.2.4.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
       "type": "package",

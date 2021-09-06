@@ -14,13 +14,13 @@ namespace Rcp.Pages.Rcp_auth
     {
         private readonly Rcp.Data.RcpContext _context;
 
+
         public IndexModel(Rcp.Data.RcpContext context)
         {
             _context = context;
         }
 
         public IList<Competitor> Competitor { get;set; }
-
         public async Task OnGetAsync()
         {
             Competitor = await _context.Competitor.ToListAsync();
