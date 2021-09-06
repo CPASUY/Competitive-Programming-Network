@@ -6,47 +6,82 @@
 }
 
 <h1>Index</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Competitor[0].Username)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Competitor[0].FirstName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Competitor[0].LastName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Competitor[0].Birthdate)
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model.Competitor)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Username)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.FirstName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.LastName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Birthdate)
-                    </td>
-                    <td>
-                        <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                        <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                        <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+<div class="text-center">
+    <div>
+        <img src="https://pbs.twimg.com/profile_images/493847405670850561/qslkfHlq_400x400.jpeg" width="100" height="100" />
+    </div>
+        @if (IndexModel.In)
+        {
+            <form method="post">
+                <input type="hidden" asp-for="Out" value="true">
+                <input type="submit" value="Sign out" />
+            </form>
+            <br>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Competitor[0].Username)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Competitor[0].FirstName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Competitor[0].LastName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Competitor[0].Birthdate)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Competitor)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Username)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FirstName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LastName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Birthdate)
+                            </td>
+                            <td>
+                                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <div>
+                <h2>Sign In</h2>
+                <form method="post">
+                    <label for="usernameTF">Username: </label>
+                    <input type="text" asp-for="Ulogin">
+                    <br>
+                    <label for="passwordTF">Password: </label>
+                    <input type="password" asp-for="Plogin">
+                    <br>
+                    <input type="submit" value="Sign In" />
+                </form>
+                @if (Model.Ulogin != null && !IndexModel.In)
+                {
+                    <p>The credentials are wrong</p>
+                }
+                <hr />
+                <form method="get" action="/Rcp-auth/Create">
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        }
+    </div>
