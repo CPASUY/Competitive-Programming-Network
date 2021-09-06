@@ -38,7 +38,7 @@ namespace Rcp.Pages.Rcp_auth
             _context.Competitor.Add(Competitor);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./Rcp-auth/Index");
         }
     }
 }
